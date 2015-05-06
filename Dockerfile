@@ -1,6 +1,5 @@
 FROM centos
 MAINTAINER Bill W
-FROM bwit/rundeck
 RUN rpm -ivh http://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm
 RUN yum -y update
 RUN yum -y puppet hiera facter 
