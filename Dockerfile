@@ -11,3 +11,4 @@ RUN puppet resource yumrepo bintray-rundeck baseurl='http://dl.bintray.com/runde
 RUN puppet resource package rundeck ensure=latest
 RUN puppet resource package wget    ensure=latest
 RUN wget https://github.com/rundeck-plugins/rundeck-ec2-nodes-plugin/releases/download/1.5/rundeck-ec2-nodes-plugin-1.5.jar -O /var/lib/rundeck/libext/rundeck-ec2-nodes-plugin-1.5.jar
+RUN /sbin/chkconfig rundeckd on
