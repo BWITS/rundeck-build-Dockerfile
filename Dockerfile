@@ -6,6 +6,6 @@ RUN yum -y install puppet hiera facter
 RUN puppet resource package puppet ensure=latest
 RUN puppet resource package facter ensure=latest
 RUN puppet resource package hiera  ensure=latest
-RUN service puppet restart
+#RUN service puppet restart
 RUN puppet resource yumrepo bintray-rundeck baseurl='http://dl.bintray.com/rundeck/rundeck-rpm/' descr='bintray rundeck repo' enabled='1' gpgcheck='0' priority='1'
 RuN puppet resource package rundeck ensure=latest
