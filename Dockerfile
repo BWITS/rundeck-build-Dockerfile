@@ -2,7 +2,7 @@ FROM centos
 MAINTAINER Bill W
 RUN rpm -ivh http://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm
 RUN yum -y update
-RUN yum -y puppet hiera facter 
+RUN yum -y install puppet hiera facter 
 RUN puppet resource package puppet ensure=latest
 RUN puppet resource package facter ensure=latest
 RUN puppet resource package hiera  ensure=latest
