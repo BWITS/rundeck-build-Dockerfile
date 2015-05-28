@@ -8,4 +8,3 @@ USER rundeck
 RUN git clone https://github.com/rundeck/rundeck.git /home/rundeck/rundeck
 ENV JAVA_HOME=/etc/alternatives/java_sdk
 WORKDIR /home/rundeck/rundeck
-RUN bash jenkins-build.sh
