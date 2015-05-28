@@ -18,3 +18,15 @@ cd rundeck
 git pull
 bash jenkins-build.sh
 ```
+Run the build
+```
+docker run -ti bwits/rundeck-build bash
+git pull
+bash jenkins-build.sh 
+
+```
+You can add parameter to `jenkins-build.sh` script:
+```
+$1 - $REL,  default value is build, vaule can be: release, upload 
+$2 - $RTAG, default value is GA.
+```
