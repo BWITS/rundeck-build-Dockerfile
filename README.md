@@ -18,9 +18,9 @@ Run the build
 
     docker run -ti bwits/rundeck-build bash
     git pull
-    bash jenkins-build.sh 
+    ./gradlew build
 
-You can add parameters to `jenkins-build.sh` script:
+Artifacts:
 
-    $1 - $REL,  default value is build, vaule can be: release, upload 
-    $2 - $RTAG, default value is GA.
+    rundeckapp/target/rundeck-X.Y.war
+    rundeck-launcher/launcher/build/libs/rundeck-launcher-X.Y.jar
