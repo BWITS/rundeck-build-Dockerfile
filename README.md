@@ -24,3 +24,8 @@ Artifacts:
 
     rundeckapp/target/rundeck-X.Y.war
     rundeck-launcher/launcher/build/libs/rundeck-launcher-X.Y.jar
+
+Copy file from container to host:
+
+    docker cp <containerId>:/home/rundeck/rundeckapp/target/rundeck-X.Y.war /host/path/target
+    docker cp <containerId>:/home/rundeck/rundeck-launcher/launcher/build/libs/rundeck-launcher-X.Y.jar /host/path/target
